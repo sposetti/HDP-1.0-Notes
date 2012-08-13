@@ -1,4 +1,3 @@
-
 Launching an EC2 Instance
 =======
 
@@ -16,21 +15,21 @@ On the HMC Server
 2. Login to machine as root
 3. Create the SSH Private Key
 
-    ssh-keygen
+	ssh-keygen
 
 4. Select default values. This creates id_rsa keys in /root/.ssh
 5. Copy the id_rsa.pub public key into the authorized_keys file to enable passwordless access
 
-    // change to the ssh directory created by the ssh-keygen
-    cd /root/.ssh
+	// change to the ssh directory created by the ssh-keygen
+	cd /root/.ssh
 
-    // concatenate the public key information into the authorized key file
-    // note: be sure not to overwrite the existing content of this authorized_keys file, only concatenate
-    cat id_rsa.pub >> authorized_keys
+	// concatenate the public key information into the authorized key file
+	// note: be sure not to overwrite the existing content of this authorized_keys file, only concatenate
+	cat id_rsa.pub >> authorized_keys
 
 6. Test out you can ssh w/o getting prompted for a password
 
-    ssh root@localhost
+	ssh root@localhost
 
     note: you might be prompted to enter "yes" the first time. On subsequent times, you'll login directly
 
@@ -68,7 +67,7 @@ On All Hosts (password-less SSH)
 Two Files
 =======
 
-1. Get the id_rsa from the HMC Server. This is the SSH Private Key and you'll need this during the install
+1. Get the id_rsa from the HMC Server. This is the *SSH Private Key* and you'll need this during the install.
 2. Create a text file and list all the hosts (one per line). Use the internal Private DNS name for each host. This can be on the instance info from the EMC2 Management Console, or by running "hostname" on each host.
 
 
