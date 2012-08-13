@@ -1,5 +1,4 @@
 
-
 http://hortonworks.com/download/thankyou_hdp1a/
 
 Supplimental Info for installing HDP 1.0 on Amazon EC2.
@@ -66,12 +65,15 @@ On All Hosts (turn off SELinux and Firewall)
 On All Hosts (password-less SSH)
 =======
 
-1. On each host, copy the <code>id_rsa.pub</code> key from the HMC server
+1. On each host, copy the <code>id_rsa.pub</code> key from the HMC server found in <code>/root/.ssh/id_rsa.pub</code>
 2. Concatenate the contents of this file to <code>authorized_keys</code> file on each host.
-3. From the HMC Server, test connecting SSH to each host
+3. From the HMC Server, test connecting via SSH to each host and not being prompted for a password:
 
+          ssh root@{hostname1.other.server}
+          ssh root@{hostname2.other.server}
+          ssh root@{hostname3.other.server}
 
-Two Files
+Create Two Files
 =======
 
 1. Get the id_rsa from the HMC Server. This is the *SSH Private Key* and you'll need this during the install.
