@@ -1,3 +1,10 @@
+
+
+http://hortonworks.com/download/thankyou_hdp1a/
+
+Supplimental Info for installing HDP 1.0 on Amazon EC2.
+
+
 Launching an EC2 Instance
 =======
 
